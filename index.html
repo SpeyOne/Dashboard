@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="http://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+  </head>
+  <body>
+      <div class="page-header">
+        <div class="header-logo">
+          <a href="#">@just<b>Free</b></a>
+        </div>
+        <div class="search-box">
+          <input type="text" class="search-bar" placeholder="Search" v-model="query">
+        </div>
+        <div class="profile-box">
+          <a href="#" class="notifications"></a>
+            <div class="nots_counter"></div>
+          <div class="username">
+            <select class="user-select" id="username" name="username_selector">
+              <option value="first">Filip J.</option>
+            </select>
+            <a href="#" class="avatar"><p>F</p></a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="menu-mobile">
+            <li><a href="#"><img src="img/icons/nav_home.png" alt="Home" width="16" height="15">Home</a></li>
+            <li><a href="#"><img src="img/icons/nav_clocks.png" alt="Time Managment" width="16" height="16">Time Managment</a></li>
+            <li><a href="#"><img src="img/icons/nav_inbox.png" alt="Inbox" width="16" height="14">Inbox</a></li>
+            <li><a href="#"><img src="img/icons/nav_calendar.png" alt="Calendar" width="16" height="16">Calendar</a></li>
+            <li><a href="#"><img src="img/icons/nav_activity.png" alt="Analytics" width="16" height="10">Analytics</a></li>
+            <li><a href="#"><img src="img/icons/nav_settings.png" alt="Settings" width="16" height="16">Settings</a></li>
+          </div>
+        </div>
+      </div>
+          <ul class="main-nav">
+            <li><a href="#"><img src="img/icons/nav_home.png" alt="Home" width="16" height="15">Home</a></li>
+            <li><a href="#"><img src="img/icons/nav_clocks.png" alt="Time Managment" width="16" height="16">Time Managment</a></li>
+            <li><a href="#"><img src="img/icons/nav_inbox.png" alt="Inbox" width="16" height="14">Inbox</a></li>
+            <li><a href="#"><img src="img/icons/nav_calendar.png" alt="Calendar" width="16" height="16">Calendar</a></li>
+            <li><a href="#"><img src="img/icons/nav_activity.png" alt="Analytics" width="16" height="10">Analytics</a></li>
+            <li><a href="#"><img src="img/icons/nav_settings.png" alt="Settings" width="16" height="16">Settings</a></li>
+          </ul>
+          <div class="dashboard">
+            <div class="title">
+              <p><strong>Hi Filip,</strong><br>Checkout your latesr projects and their progress.</p>
+            </div>
+            <div class="wavylines">
+              <div class="timeline_selector">
+                <label for="timeline"></label>
+                <select class="timeline" id="timeline" name="timeline_selector">
+                  <option selected value="week">this week</option>
+                  <option value="month">this month</option>
+                  <option value="year">this year</option>
+                </select>
+                <p><strong>Wavy Lines</strong><br>Working Hours</p>
+                <div id="areachart"></div>
+              </div>
+              </div>
+              <div class="title">
+                <p><strong>Crunch some Numbers</strong><br>See how your projects are progressing via the new statistics engine.</p>
+                <div class="timeline_selector">
+                  <label>Timeline:</label>
+                  <select class="timeline" id="timeline" name="timeline_selector">
+                    <option value="first">3 Days</option>
+                    <option selected value="second">7 Days</option>
+                    <option value="third">Month</option>
+                  </select>
+                </div>
+              </div>
+              <div class="crunch_board">
+                <div class="crunch_charts">
+                  <div class="threerowchart">
+                    <div class="first_row">
+                      <p><strong>96</strong><br>Working Hours</p>
+                      <div class="columns">
+                        <div class="first_column"></div>
+                        <div class="second_column"></div>
+                        <div class="third_column"></div>
+                      </div>
+                    </div>
+                    <div class="second_row">
+                      <p><strong>1,204</strong><br>Converstaions</p>
+                      <div id="onelinechart"></div>
+                    </div>
+                    <div class="third_row">
+                      <p><strong>7</strong><br>People</p>
+                      <div class="circles">
+                        <div class="first_circle"></div>
+                        <div class="second_circle"></div>
+                        <div class="third_circle"></div>
+                        <div class="fourth_circle"></div>
+                        <div class="fifth_circle"></div>
+                        <div class="sixth_circle"></div>
+                        <div class="seventh_circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columnchart">
+                    <p><strong>Daily Progress</strong><br>Working Hours</p>
+                    <div class="timeline_selector">
+                      <select class="timeline" id="timeline" name="timeline_selector">
+                        <option selected value="week">this week</option>
+                        <option value="month">this month</option>
+                        <option value="year">this year</option>
+                      </select>
+                    </div>
+                    <div id="linecolumnchart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="title">
+                <p><strong>Current Progress</strong><br>This table will show you how your current projects are behaving.</p>
+              </div>
+              <div class="current_projects">
+                <div class="projects-list">
+                  <div class="project">
+                    <div class="project_preview"></div>
+                    <p class="title"><strong>Project Title</strong><br>Design & Development</p>
+                    <p class="update_time">Last updated Today at 4:24 AM</p>
+                    <p class="clocks">26:30</p>
+                    <p class="project_comments">624</p>
+                    <div class="project_progress load_15"><span style="width: 0%"></span></div>
+                  </div>
+                  <div class="project">
+                    <div class="project_preview"></div>
+                    <p class="title"><strong>Project Title</strong><br>Design & Development</p>
+                    <p class="update_time">Last updated Today at 4:24 AM</p>
+                    <p class="clocks">26:30</p>
+                    <p class="project_comments">624</p>
+                    <div class="project_progress load_90"><span style="width: 0%"></span></div>
+                  </div>
+                  <div class="project">
+                    <div class="project_preview"></div>
+                    <p class="title"><strong>Project Title</strong><br>Design & Development</p>
+                    <p class="update_time">Last updated Today at 4:24 AM</p>
+                    <p class="clocks">26:30</p>
+                    <p class="project_comments">624</p>
+                    <div class="project_progress load_85"><span style="width: 0%"></span></div>
+                  </div>
+                  <div class="project">
+                    <div class="project_preview"></div>
+                    <p class="title"><strong>Project Title</strong><br>Design & Development</p>
+                    <p class="update_time">Last updated Today at 4:24 AM</p>
+                    <p class="clocks">26:30</p>
+                    <p class="project_comments">624</p>
+                    <div class="project_progress load_30"><span style="width: 0%"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="title">
+                <p><strong>Crunch some Numbers</strong><br>See how your projects are progressing via the new statistics engine.</p>
+                <div class="timeline_selector">
+                  <label>Timeline:</label>
+                  <select class="timeline" id="timeline" name="timeline_selector">
+                    <option value="first">3 Days</option>
+                    <option selected value="second">7 Days</option>
+                    <option value="third">Month</option>
+                  </select>
+                </div>
+              </div>
+              <div class="profile_stats">
+                <div class="pie_chart">
+                  <p><strong>Client Hours</strong><br>Working Hours</p>
+                  <div id="piechart"></div>
+                </div>
+                <div class="general_menu">
+                  <div class="profile_photo">
+                    <div class="online_status"></div>
+                  </div> 
+                  <p><strong>Jake Applessed</strong><br>London, UK</p> 
+                  </p>
+                  <table class="profile-table">
+                    <tr>
+                      <td>Working hours<br><strong>14 hours</strong></td>
+                      <td>Ammount Total<br><strong>$ 6,269</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Overdue<br><strong>$ 829</strong></td>
+                      <td>% overall work<br><strong>48%</strong></td>
+                    </tr>
+                  </table>
+                  <a href="#">Send Invoice</a>
+                </div>
+                <div class="overdue_chart">
+                  <p><strong>Total Overdue</strong><br>I need Dollars</p>
+                  <b>$14,220</b>
+                  <div id="linechart"></div>
+                </div>
+              </div>
+            </div>
+          <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+          <script src="areachart.js"></script>
+          <script src="linecolumnchart.js"></script>
+          <script src="onelinechart.js"></script>
+          <script src="piechart.js"></script>
+          <script src="linechart.js"></script>
+      </body>
+</html>
